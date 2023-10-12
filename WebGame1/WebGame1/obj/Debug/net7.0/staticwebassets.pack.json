@@ -17,6 +17,34 @@
       "PackagePath": "staticwebassets\\css\\app.css"
     },
     {
+      "Id": "C:\\WebGame1\\WebGame1\\WebGame1\\wwwroot\\css\\img\\BO.png",
+      "PackagePath": "staticwebassets\\css\\img\\BO.png"
+    },
+    {
+      "Id": "C:\\WebGame1\\WebGame1\\WebGame1\\wwwroot\\css\\img\\GAU.jfif",
+      "PackagePath": "staticwebassets\\css\\img\\GAU.jfif"
+    },
+    {
+      "Id": "C:\\WebGame1\\WebGame1\\WebGame1\\wwwroot\\css\\img\\GAU2.png",
+      "PackagePath": "staticwebassets\\css\\img\\GAU2.png"
+    },
+    {
+      "Id": "C:\\WebGame1\\WebGame1\\WebGame1\\wwwroot\\css\\img\\JUMOC2.png",
+      "PackagePath": "staticwebassets\\css\\img\\JUMOC2.png"
+    },
+    {
+      "Id": "C:\\WebGame1\\WebGame1\\WebGame1\\wwwroot\\css\\img\\JYUMOC.jfif",
+      "PackagePath": "staticwebassets\\css\\img\\JYUMOC.jfif"
+    },
+    {
+      "Id": "C:\\WebGame1\\WebGame1\\WebGame1\\wwwroot\\css\\img\\bo2.png",
+      "PackagePath": "staticwebassets\\css\\img\\bo2.png"
+    },
+    {
+      "Id": "C:\\WebGame1\\WebGame1\\WebGame1\\wwwroot\\css\\img\\free-icon-rock-paper-scissors-6851361.png",
+      "PackagePath": "staticwebassets\\css\\img\\free-icon-rock-paper-scissors-6851361.png"
+    },
+    {
       "Id": "C:\\WebGame1\\WebGame1\\WebGame1\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },

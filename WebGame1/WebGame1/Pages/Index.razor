@@ -1,7 +1,51 @@
 ﻿@page "/"
+@using System.Timers
+@code {
+    
+    
+    private string[] imageUrls = new string[]
+    {
+        "css/img/BO.png",
+        "css/img/GAU2.png",
+        "css/img/JUMOC2.png"
+    };
+    private string currentImage;
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        Random random = new Random();
+        currentImage = imageUrls[random.Next(imageUrls.Length)];
+        Timer timer = new Timer(500);
+        timer.Elapsed += (sender, e) =>
+        {
+            currentImage = imageUrls[random.Next(imageUrls.Length)];
+            StateHasChanged();
+        };
+        timer.Start();
+    }
+}
+
+
+<div style="text-align: center;">
+    <img src="css/img/free-icon-rock-paper-scissors-6851361.png" style="max-width: 200px; max-height: 200px;" />
+    <h1 style="font-size: 24px;">가위 바위 보 게임</h1>
+</div>
+
 
 <div class="game-container">
     <div class="square">1</div>
-    <div class="square">VS</div>
-    <div class="square">3</div>
+    <div class="square">
+        <button class="play-button">Play</button>
+    </div>
+     <img src="@currentImage" alt="Image" style="height: 200px" width="200px"/>
 </div>
+
+<style>
+
+    .play-button {
+        font-size: 24px; /* 원하는 크기로 조정할 수 있습니다. */
+        padding: 10px 20px; /* 원하는 패딩을 적용할 수 있습니다. */
+    }
+</style>
+

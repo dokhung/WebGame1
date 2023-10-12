@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ssnmk+SO/PB47EKtSHmwUXR69P044Q9yU5hmiYbZsOQx4N9QjxSKj/ealGCBIX1glg+a62DlhBN9I5v6GIoKuw==",
+  "dgSpecHash": "fNKLc9biB/dWqjx9+rdRFrJrUUEUZrhQeOi/DQHzLvqhlF20IY756ISxek2dQpkRQ/yKiuJEdmyDKwfc7hBZnw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\RiderProjects\\WebGame1\\WebGame1\\WebGame1.csproj",
+  "projectFilePath": "C:\\WebGame1\\WebGame1\\WebGame1\\WebGame1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.authorization\\7.0.10\\microsoft.aspnetcore.authorization.7.0.10.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.components\\7.0.10\\microsoft.aspnetcore.components.7.0.10.nupkg.sha512",

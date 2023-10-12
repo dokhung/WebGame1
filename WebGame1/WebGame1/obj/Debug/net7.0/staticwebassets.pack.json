@@ -1,19 +1,23 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\user\\RiderProjects\\WebGame1\\WebGame1\\bin\\Debug\\net7.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "Id": "C:\\WebGame1\\WebGame1\\WebGame1\\bin\\Debug\\net7.0\\wwwroot\\_framework\\blazor.webassembly.js",
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
     },
     {
-      "Id": "C:\\Users\\user\\RiderProjects\\WebGame1\\WebGame1\\obj\\Debug\\net7.0\\build-gz\\lf549Q+L.gz",
+      "Id": "C:\\WebGame1\\WebGame1\\WebGame1\\obj\\Debug\\net7.0\\build-gz\\lf549Q+L.gz",
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
     },
     {
-      "Id": "C:\\Users\\user\\RiderProjects\\WebGame1\\WebGame1\\wwwroot\\css\\app.css",
+      "Id": "C:\\WebGame1\\WebGame1\\WebGame1\\wwwroot\\css\\MainLayout.css",
+      "PackagePath": "staticwebassets\\css\\MainLayout.css"
+    },
+    {
+      "Id": "C:\\WebGame1\\WebGame1\\WebGame1\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },
     {
-      "Id": "C:\\Users\\user\\RiderProjects\\WebGame1\\WebGame1\\wwwroot\\index.html",
+      "Id": "C:\\WebGame1\\WebGame1\\WebGame1\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
     {

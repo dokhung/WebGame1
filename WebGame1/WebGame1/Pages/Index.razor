@@ -24,6 +24,23 @@
         };
         timer.Start();
     }
+
+    public void OnPlay()
+    {
+        base.OnInitialized();
+        Random random = new Random();
+        currentImage = imageUrls[random.Next(imageUrls.Length)];
+        Timer timer = new Timer(10);
+        timer.Elapsed += (sender, e) =>
+        {
+            currentImage = imageUrls[random.Next(imageUrls.Length)];
+            StateHasChanged();
+        };
+        base.OnInitialized();
+        currentImage = imageUrls[random.Next(imageUrls.Length)];
+        
+        
+    }
 }
 
 
@@ -34,12 +51,20 @@
 
 
 <div class="game-container">
-    <div class="square">1</div>
     <div class="square">
-        <button class="play-button">Play</button>
+        <img src="@currentImage" alt="Image" style="height: 200px" width="200px"/>
     </div>
-     <img src="@currentImage" alt="Image" style="height: 200px" width="200px"/>
+    <div class="square">
+        <button class="play-button" onclick="@OnPlay">Play</button>
+    </div>
+    <div class="square">
+        <img src="@currentImage" alt="Image" style="height: 200px" width="200px"/>
+    </div>
+     
 </div>
+<div class="centered-text"><div>당신</div>스코어<div>상대</div></div>
+
+
 
 <style>
 
@@ -47,5 +72,8 @@
         font-size: 24px; /* 원하는 크기로 조정할 수 있습니다. */
         padding: 10px 20px; /* 원하는 패딩을 적용할 수 있습니다. */
     }
+    .centered-text {
+                text-align: center; /* 텍스트를 가운데 정렬합니다. */
+            }
 </style>
 

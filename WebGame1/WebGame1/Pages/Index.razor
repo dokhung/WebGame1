@@ -1,15 +1,34 @@
 ﻿@page "/"
 @using System.Timers
+
+<style>
+    .play-button {
+        font-size: 24px;
+        padding: 10px 20px;
+    }
+
+    .centered-text {
+        text-align: center;
+    } 
+</style>
+
 @code {
-    
-    
     private string[] imageUrls = new string[]
     {
         "css/img/BO.png",
         "css/img/GAU2.png",
         "css/img/JUMOC2.png"
     };
+
     private string currentImage;
+    private int playerScore = 0;
+    private int computerScore = 0;
+    private string playerChoiceImage = ""; 
+    private string computerChoiceImage = ""; 
+    private string gameResult = "";
+    private bool playerImgVisible = true;
+    private bool computerImgVisible = true;
+    // private bool showResultDialog = false;
 
     protected override void OnInitialized()
     {
@@ -27,53 +46,85 @@
 
     public void OnPlay()
     {
-        base.OnInitialized();
+    playerChoiceImage = "css/img/default.png"; // Provide a default image path
+    computerChoiceImage = "css/img/default.png"; // Provide a default image path
         Random random = new Random();
-        currentImage = imageUrls[random.Next(imageUrls.Length)];
-        Timer timer = new Timer(10);
-        timer.Elapsed += (sender, e) =>
+        int computerChoice = random.Next(3);
+        int playerChoice = random.Next(3);
+
+        playerChoiceImage = imageUrls[playerChoice];
+        computerChoiceImage = imageUrls[computerChoice];
+
+        if (playerChoice == computerChoice)
         {
-            currentImage = imageUrls[random.Next(imageUrls.Length)];
-            StateHasChanged();
-        };
-        base.OnInitialized();
-        currentImage = imageUrls[random.Next(imageUrls.Length)];
-        
+            gameResult = "Tie";
+        }
+        else if ((playerChoice == 0 && computerChoice == 2) ||
+                 (playerChoice == 1 && computerChoice == 0) ||
+                 (playerChoice == 2 && computerChoice == 1))
+        {
+            playerScore++;
+            gameResult = "Player wins";
+            currentImage = playerChoiceImage; 
+            
+            
+
+        }
+        else
+        {
+            computerScore++;
+            gameResult = "Computer wins";
+            currentImage = computerChoiceImage; 
+            
+
+        }
+
+        // showResultDialog = true;
+        StateHasChanged();
+
         
     }
+
+    // private void CloseResultDialog()
+    // {
+    //     showResultDialog = false;
+    // }
 }
 
 
 <div style="text-align: center;">
-    <img src="css/img/free-icon-rock-paper-scissors-6851361.png" style="max-width: 200px; max-height: 200px;" />
+    <img src="@currentImage" alt="Image" style="height: 200px" width="200px"/>
     <h1 style="font-size: 24px;">가위 바위 보 게임</h1>
+    <p>@gameResult</p>
+    @* @if (showResultDialog) *@
+            @* { *@
+                <div class="result-dialog">
+                    <div class="centered-text">
+                        <p>Player: @playerScore</p>
+                        <p>Computer: @computerScore</p>
+                        @* <button class="close-button" @onclick="CloseResultDialog">Close</button> *@
+                    </div>
+                </div>
+            @* } *@
 </div>
 
 
 <div class="game-container">
     <div class="square">
-        <img src="@currentImage" alt="Image" style="height: 200px" width="200px"/>
+        <img src="@playerChoiceImage" style="height: 200px; width: 200px" id="playerImg2" alt=""/>
     </div>
     <div class="square">
         <button class="play-button" onclick="@OnPlay">Play</button>
     </div>
     <div class="square">
-        <img src="@currentImage" alt="Image" style="height: 200px" width="200px"/>
+        <img src="@computerChoiceImage" style="height: 200px; width: 200px" id="computerImg2" alt=""/>
     </div>
-     
+
 </div>
-<div class="centered-text"><div>당신</div>스코어<div>상대</div></div>
 
 
 
-<style>
 
-    .play-button {
-        font-size: 24px; /* 원하는 크기로 조정할 수 있습니다. */
-        padding: 10px 20px; /* 원하는 패딩을 적용할 수 있습니다. */
-    }
-    .centered-text {
-                text-align: center; /* 텍스트를 가운데 정렬합니다. */
-            }
-</style>
+
+
 

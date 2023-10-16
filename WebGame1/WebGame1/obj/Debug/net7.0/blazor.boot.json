@@ -198,16 +198,16 @@
       "mscorlib.dll": "sha256-Xo3wdLenBZ41X73hGjkWTbEQZDKcQsnPFtlkePUxLY0=",
       "netstandard.dll": "sha256-qjqaAEP3hdLnU\/TnoCd8HaSa+0ruV1TpdaB2GUujGMw=",
       "System.Private.CoreLib.dll": "sha256-\/7uQ+eNo9u3H1mpgMko4D3tKZHeGRfsRjna0Dqsu62k=",
-      "WebGame1.dll": "sha256-7DiJ\/EuNrJA\/UEpdmoesIhJ7Kk58KP5qKV6s\/X2fMDk="
+      "WebGame1.dll": "sha256-2xk2iRogiSR+Rkf73fzfhxDg9eflCjp59AZVzQfbQKo="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "WebGame1.pdb": "sha256-lUvukCxcOYypRafCBMCc6C77DY9friLpNkY7ya\/\/jME="
+      "WebGame1.pdb": "sha256-vvyvzdJVyRn2uCcs+i4Y9Cj0QDVJRJPwl1HJqswKfrM="
     },
     "runtime": {
-      "dotnet.7.0.10.q7i6dhrrhe.js": "sha256-qJB30QURoyH3y3WyayHu6nMFIx2XNOkXCez7tagGpvE=",
+      "dotnet.7.0.10.co63w1drk2.js": "sha256-qJB30QURoyH3y3WyayHu6nMFIx2XNOkXCez7tagGpvE=",
       "dotnet.timezones.blat": "sha256-pf9chcB37Cf13KuuvScsozomnAUanMeCfvDr9Wqofh8=",
       "dotnet.wasm": "sha256-gdnUvePnfbvTJDGtaK1+TnCtuTiC5NZjlYZ9kgEpMO0=",
       "icudt.dat": "sha256-tO5O5YzMTVSaKBboxAqezOQL9ewmupzV2JrB5Rkc8a4=",

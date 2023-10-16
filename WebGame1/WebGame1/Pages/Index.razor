@@ -12,7 +12,10 @@
     } 
 </style>
 
+
+
 @code {
+    bool showImages = false;
     private string[] imageUrls = new string[]
     {
         "css/img/BO.png",
@@ -28,7 +31,6 @@
     private string gameResult = "";
     private bool playerImgVisible = true;
     private bool computerImgVisible = true;
-    // private bool showResultDialog = false;
 
     protected override void OnInitialized()
     {
@@ -46,8 +48,6 @@
 
     public void OnPlay()
     {
-    playerChoiceImage = "css/img/default.png"; // Provide a default image path
-    computerChoiceImage = "css/img/default.png"; // Provide a default image path
         Random random = new Random();
         int computerChoice = random.Next(3);
         int playerChoice = random.Next(3);
@@ -68,6 +68,7 @@
             currentImage = playerChoiceImage; 
             
             
+            
 
         }
         else
@@ -79,16 +80,12 @@
 
         }
 
-        // showResultDialog = true;
+        showImages = true;
+
         StateHasChanged();
 
         
     }
-
-    // private void CloseResultDialog()
-    // {
-    //     showResultDialog = false;
-    // }
 }
 
 
@@ -96,28 +93,24 @@
     <img src="@currentImage" alt="Image" style="height: 200px" width="200px"/>
     <h1 style="font-size: 24px;">가위 바위 보 게임</h1>
     <p>@gameResult</p>
-    @* @if (showResultDialog) *@
-            @* { *@
                 <div class="result-dialog">
                     <div class="centered-text">
                         <p>Player: @playerScore</p>
                         <p>Computer: @computerScore</p>
-                        @* <button class="close-button" @onclick="CloseResultDialog">Close</button> *@
                     </div>
                 </div>
-            @* } *@
 </div>
 
 
 <div class="game-container">
     <div class="square">
-        <img src="@playerChoiceImage" style="height: 200px; width: 200px" id="playerImg2" alt=""/>
+        <img src="@playerChoiceImage" style="height: 200px; width: 200px; display: @(showImages ? "block" : "none")" id="playerImg2" alt="" />
     </div>
     <div class="square">
         <button class="play-button" onclick="@OnPlay">Play</button>
     </div>
     <div class="square">
-        <img src="@computerChoiceImage" style="height: 200px; width: 200px" id="computerImg2" alt=""/>
+        <img src="@computerChoiceImage" style="height: 200px; width: 200px; display: @(showImages ? "block" : "none")" id="computerImg2" alt=""/>
     </div>
 
 </div>
